@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>JS Mandelbrot | By whatgoodisaroad</title>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <script type="text/javascript" src="jsmandelbrot.js"></script>
+        <style>
+            body { margin:0; /*cursor:wait;*/ }
+            canvas { width:100%; height:100%; position:absolute; top:0; left:0; }
+            #mandelbrot { z-index:1; }
+            #capture { z-index:2; opacity:0.2; }
+            span { z-index:3; color:white; position:absolute; opacity:0.2; font-family:Monospace; }
+            #msg { bottom:10; right:10; }
+            #coord { left:10; top:10; font-size:small; }
+            img { display:none; }
+        </style>
+    </head>
+    <body onload="jsmandelbrot();">
+        <img src="frac.png" />
+        <span id="msg">Working...</span>
+        <span id="coord"></span>
+        <canvas id="capture" height="1024" width="1024"></canvas>
+        <canvas id="mandelbrot" height="1024" width="1024">
+            This site only works in browsers which support HTML5.
+        </canvas>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"> </script>
+        <div id="placeholder"></div>
+        <script type="text/javascript">
+            CFInstall.check({ node:"placeholder" });
+        </script>
+    </body>
+</body>
